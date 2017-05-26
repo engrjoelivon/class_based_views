@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+{% block title %}
+    generic views
+{% endblock %}
+{% block showlist %}
+    class="active"
+{% endblock %}
+
+{% block content %}
+{% for publisher in my_favorite_publishers %}
+
+    <table>
+    <tr>
+        <td> <a href=" {{ publisher.pk }} ">
+            {{ publisher.name }}</a> </td>  <td>
+        {{ publisher.address }} </td>  <td>
+        {{ publisher.city }} </td>
+    </tr>
+
+    </table>
+
+{% endfor %}
+
+        <a href=" {% url 'author' %}"> Add Author  </a>
+
+{% endblock %}
+

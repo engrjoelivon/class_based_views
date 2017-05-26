@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block showbasic%}
+    class="active"
+{% endblock %}
+
+
+
+{% block basic %}
+
+
+
+    {% for ob in object_list %}
+
+        {{ ob.task_name  }}
+    {% endfor %}
+
+    <div class="container">
+  <!-- Trigger the modal with a button -->
+        <ul>
+            <!--modal a -->
+    <li class="btn btn-info btn-lg" data-toggle="modal" data-target="#mytem">
+     Use View </li>
+             <!-- Modal -->
+  <div class="modal fade" id="mytem" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4  class="modal-title">View</h4>
+        </div>
+        <div class="modal-body">
+            <p>
+
+                View is the base class for class based views.Views by itself can not be used to create a classBasedView,it must be
+                subclassed.Because django expects to see a callable object,to use classes as views call its as view() method.
+           </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+             <!--modal b -->
+            <li class="btn btn-info btn-lg" data-toggle="modal" data-target="#temsub" > View subclass</li>
+            <div class="modal fade" id="temsub" role="dialog"> <div class="modal-dialog">
+                <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4  class="modal-title">View Subclass</h4>
+        </div>
+        <div class="modal-body">
+
+          <p>
+              This is the base class for defining class based views.Create the class and override the view class,inside the view class
+              define a get method and a set method,these method still needs to act as a view function ie accept an http request and return an
+              Http response.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+            <li class="btn btn-info btn-lg" data-toggle="modal" data-target="#tempmodal" > Use TemplateView with model</li>
+            <div class="modal fade" id="tempmodal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4  class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      <li class="btn btn-info btn-lg" data-toggle="modal" data-target="#temmodalsub" > Use TemplateView subclass with model</li>
+            <div class="modal fade" id="temmodalsub" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4  class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+    </ul>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4  class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+

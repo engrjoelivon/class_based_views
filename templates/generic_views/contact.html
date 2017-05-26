@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form method="post" action=".">
+    {% csrf_token %}
+        <input type="text" name="salutation" placeholder="salutation"> <br/>
+        <input type="text" name="name" placeholder="Author name"> <br/>
+        <input type="email" name="email" placeholder="Author email"> <br/>
+    <input type="file" value="image" name="headshot"> <br/>
+   <input type="submit" value="Add Author">
+
+    </form>
+
+
+
+{% endblock %}

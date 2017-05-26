@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block title %} detail page {% endblock %}
+
+{% block content %}
+    <div id="topcontent">
+
+{{ task.name }} </br>
+{% if books_list %}
+    {% for books in books_list %}
+
+        {{ books.title }} </br>
+    {% endfor %}
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+Created a new app called practise2.
+My intent was to practise every topic relating to generic and class_based_views.
+Finally i was able to cover
+TemplateView
+.ListView :- Uses Object_list to pass the modal to the template
+.DetailView :- Used object to pass the selected choice from a list to the template.
+.UpdateView :-Uses form to display the selection that is intended to be updated in the template.
+.DeleteView :-Uses object as the keyword to reference the object to be deleted.By describing the template to be suffixed with _check_delete.html django will automatically delete the object that has been referenced.
+.Resolved the confusion i always had when having to use multiple using multiple notation extention regex in the url despatcher.If multiple urls will be passing a value either using pk or slugs,the name of the url should be attached after the regex and not before it url(r'^(?P<pk>[-\w]+)/delete$', DeleteModal.as_view(), name='modal-delete'),  NOT url(r'^delete/(?P<pk>[-\w]+)$', DeleteModal.as_view(), name='modal-delete'),
+Learnt the library reverse,this is used to get the absolute url by passing in the name as entered in the urlpatterns list.
+get get_context_data can be used to get the context and add another key to it.The default key is object.
+.When using generic classes like update delete create etc,the string that should be equated to action inside the html form should be left empty ie <form method="post" action=""  > is a value is passed it wont work as a generic anymore and would return error 405

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body >
+
+<div style=" width: 500px; height: 700px;  margin: auto"; >
+<h1>welcome to task page</h1>
+
+
+
+
+<form method="post" action=".">
+    {% csrf_token %}
+     {{ mylist.name}}
+       {% if messages %}
+        {% for message in messages %}
+            Hello world
+        {% endfor %}
+    {% endif %}
+    {%   for field in form.visible_fields %}
+        {{field.help_text}}<br/>
+        {{ field }}<br/>
+        {{ field.errors }}<br/>
+    {% endfor %}
+    <input type="submit" value="enter">
+</form>
+</div>
+</body>
+</html>
