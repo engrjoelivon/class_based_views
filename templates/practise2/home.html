@@ -7,7 +7,9 @@
 <body>
     <H2>Class</H2>
 {% for name in object_list %}
-  <i>view</i> <a  href="/prac2/{{name.pk  }} ">{{ name.name }}  </a> <i>update</i>  <a  href="/prac2/{{name.pk}}/update">{{ name.name }}  </a>  <i> delete</i>  <a  href="/prac2/{{name.pk}}/delete">{{ name.name }}  </a> <br> <hr>
+  <i>view</i> <a  href="  {% url 'modal-detail' name.id  %}">{{ name.name }}  </a>
+    <i>update</i>  <a  href=" {% url 'modal-update'  name.id %} " >{{ name.name }}  </a>
+    <i> delete</i>  <a  href="{% url 'modal-delete'  name.id %}">{{ name.name }}  </a> <br> <hr>
 
 
 {% endfor %}

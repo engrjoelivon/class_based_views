@@ -18,6 +18,7 @@ urlpatterns=[
 
     url(r'^(?P<pk>[-\w]+)/update$',UpdateModel.as_view(), name='modal-update'),
 
+
              #url(r'^(?P<selection>[-\w]+)/$', view=default_detailed_selection, name='article-detail'),
 
     #UpdateModel.as_view(), name='article-detail'),

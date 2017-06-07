@@ -42,7 +42,7 @@ INSTALLED_APPS = (
     'generic_views',
     'formbasedclassview',
     'practise2',
-
+     'url_exe',
 
 )
 MIDDLEWARE_CLASSES = (

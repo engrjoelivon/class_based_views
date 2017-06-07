@@ -49,7 +49,7 @@ class UpdateModel(UpdateView):
     fields = ('name',"age")
 
     template_name = "practise2/update.html"
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("home") #if django succesfully make changes to the object it should load the url as specified inside the reverse_lazy function.
 
 
 

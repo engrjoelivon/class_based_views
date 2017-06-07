@@ -24,7 +24,8 @@ urlpatterns = [
     url(r'^basic/',include(basicurl)),
     url(r'^listview/',include(genericurl)),
     url(r'^formview/',include(formurls)),
-    url(r'^prac2/',include(practiseurl))
+    url(r'^prac2/',include(practiseurl)),
+url(r'^prac2/',include(practiseurl))
 
 
 
